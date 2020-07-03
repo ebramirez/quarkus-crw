@@ -1,0 +1,49 @@
+---
+apiVersion: 1.0.0
+metadata:
+  generateName: quarkus-
+projects:
+  -
+    name: quarkus-quickstarts
+    source:
+      type: git
+      location: "https://github.com/ebramirez/quarkus-quickstarts.git"
+      sparseCheckoutDir: getting-started
+components:
+  - alias: maven
+    type: chePlugin
+    reference: https://github.com/eramirez/quarkus-crw/raw/master/meta.yaml
+commands:
+  -
+    name: Package
+    actions:
+      -
+        type: exec
+        component: maven
+        command: "mvn package"
+        workdir: ${CHE_PROJECTS_ROOT}/quarkus-quickstarts/getting-started
+  -
+    name: Start Development mode (Hot reload + debug)
+    actions:
+      -
+        type: exec
+        component: maven
+        command: "mvn compile quarkus:dev"
+        workdir: ${CHE_PROJECTS_ROOT}/quarkus-quickstarts/getting-started
+  -
+    name: Attach remote debugger
+    actions:
+    - type: vscode-launch
+      referenceContent: |
+        {
+          "version": "0.2.0",
+          "configurations": [
+            {
+              "type": "java",
+              "request": "attach",
+              "name": "Attach to Remote Quarkus App",
+              "hostName": "localhost",
+              "port": 5005
+            }
+          ]
+        }
