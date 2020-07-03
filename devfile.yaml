@@ -12,7 +12,7 @@ projects:
 components:
   - alias: maven
     type: chePlugin
-    reference: https://github.com/eramirez/quarkus-crw/raw/master/meta.yaml
+    reference: https://raw.githubusercontent.com/ebramirez/quarkus-crw/master/meta.yaml
 commands:
   -
     name: Package
