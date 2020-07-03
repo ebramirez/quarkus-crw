@@ -20,9 +20,9 @@ spec:
         type: terminal
         discoverable: true
   containers:
-    - image: "quay.io/sunix/rh-training-crw-quarkus-maven:DO328-quarkus-devfile"
+    - image: "quay.io/eramirez/quarkus-crw"
       name: maven
-      memoryLimit: "3500Mi"
+      memoryLimit: "512Mi"
       args:
         - sh
         - -c
