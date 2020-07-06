@@ -10,8 +10,7 @@ projects:
       location: "https://github.com/ebramirez/quarkus-quickstarts.git"
       sparseCheckoutDir: getting-started
 components:
-  - 
-    alias: maven
+  - alias: maven
     type: chePlugin
     reference: https://raw.githubusercontent.com/ebramirez/quarkus-crw/master/meta.yaml
     endpoints:
