@@ -9,16 +9,9 @@ description: Support for Quarkus, Maven, Gradle. Java Linting, Intellisense, for
 icon: https://raw.githubusercontent.com/redhat-developer/codeready-workspaces/master/dependencies/che-plugin-registry/resources/images/default.svg?sanitize=true
 repository: https://github.com/redhat-developer/vscode-quarkus
 category: Language
-firstPublicationDate: "2020-02-12"
+firstPublicationDate: "2020-07-01"
 spec:
   endpoints:
-   -  name: "quarkus"
-      public: true
-      targetPort: 8080
-      attributes:
-        protocol: http
-        type: terminal
-        discoverable: true
    -  name: 'hello-greeting-endpoint'
       port: 8080
       attributes:
