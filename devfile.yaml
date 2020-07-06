@@ -10,9 +10,15 @@ projects:
       location: "https://github.com/ebramirez/quarkus-quickstarts.git"
       sparseCheckoutDir: getting-started
 components:
-  - alias: maven
+  - 
+    alias: maven
     type: chePlugin
     reference: https://raw.githubusercontent.com/ebramirez/quarkus-crw/master/meta.yaml
+    endpoints:
+      - name: 'hello-greeting-endpoint'
+        port: 8080
+        attributes:
+          path: /hello/greeting/che-user
 commands:
   -
     name: Package
