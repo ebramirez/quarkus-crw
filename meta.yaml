@@ -22,7 +22,7 @@ spec:
   containers:
     - image: "quay.io/eramirez/quarkus-crw"
       name: maven
-      memoryLimit: "3072Mi"
+      memoryLimit: "2560Mi"
       args:
         - sh
         - -c
