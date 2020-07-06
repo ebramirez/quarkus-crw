@@ -19,6 +19,10 @@ spec:
         protocol: http
         type: terminal
         discoverable: true
+   -  name: 'hello-greeting-endpoint'
+      port: 8080
+      attributes:
+        path: /hello/greeting/che-user
   containers:
     - image: "quay.io/eramirez/quarkus-crw"
       name: maven
